@@ -1,11 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="es" lang="es" xmlns="http://www.w3.org/1999/xhtml"> 
+
+			
+			
+	<head>
+		<title>Validaci&oacute;n de usuario de la Universidad de Almería</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="https://oam.ual.es:443/public_oam/oam/styles.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+		<script>
+		
+		function trim(s)
+		{
+		return s.replace( /^\s*/, "" ).replace( /\s*$/, "" );
+		}
+
+		function validate()
+		{
+			if(trim(document.frmLogin.username.value)=="")
+			{
+			alert("Login empty");
+			document.frmLogin.susername.focus();
+			return false;
+			}
+			else if(trim(document.frmLogin.password.value)=="")
+			{
+			alert("password empty");
+			document.frmLogin.password.focus();
+			return false;
+			}
+			document.getElementById('submit').setAttribute("disabled","disabled");
+		}
+		function setFocus()
+	   {
+		  document.forms[0].username.focus();
+	   };
+	   window.onload = setFocus; 
+		</script>
+    </head>
+
+<body id="page-login"><noscript>
+</noscript>
+
+
+
+
+<!-- Start open page-->
+
+<!-- end open page  -->
+
+<script type="text/javascript">
+<!-- Comment out script for old browsers
+   function buttonSubmit(buttonSelection)
+   {
+      if(buttonSelection == 'SPCANCEL')
+           window.close();
+      else 
+      {
+         document.forms[0].p_action.value = buttonSelection;
+         document.forms[0].submit();
+      }
+   }
+//-->
+</script>
+<noscript>
+Se necesita un explorador activado para archivo de comandos para que esta página funcione correctamente.
+</noscript>
+
+<!-- start body -->
+<script type="text/javascript">
+<!-- Comment out script for old browsers
+   function setFocus()
+   {
+      
+      document.forms[0].ssousername.focus();
+      
+   };
+   window.onload = setFocus;
+//-->
+</script>
+<noscript>
+</noscript>
+
+    <div id="login-dialog">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://www.ual.es/application/themes/ual/images/logoual25-300px.png">
+            </div>
+            <h1 class="card-header">Validación de usuario de la UAL</h1>
+            <div class="card-body">
+                <h2 class="card-title">Iniciar sesión</h2>
+                
+
+                <form action="https://oam.ual.es/oam/server/auth_cred_submit" method="POST">
+                    <input name="p_action" value="" type="HIDDEN">
+                    <!-- page parameters -->
+                    <input name="v" value="v1.4" type="HIDDEN">
+                    <input name="site2pstoretoken" value="v3.0~442101A7~09D3D423149ECAD787CFEDFDC2FD2026~D8C47FA9BBF27D28C5AAAD1ECCC8AB0FC0BEFA7BDE08686B3A81A4C98186A8DD9523848395CC5ED21525C7044CCE69C8958951D9B890A226847210095273A65993E8A99F798D18FD13F05C4AF519E9CB766FC751F7FB48709BF0AF333B904421E0436D41CC1B2B7C14A6BDEA9F4DFA6028DC668EC641BEBF3D0827474B629B843F5CA4AFB3BFA77D6CE7F1234D54A4552855611AB1F8F5978E60E63DE5D404D8182CA53132466A418B5D2F13875A71F9FF0F0DDFDAAB891A84CECEF0EDA5C104E9E2D15ED65CD9454FFEB05692A95386" type="HIDDEN">
+                    <input name="appctx" value="" type="HIDDEN">
+                    <input name="p_cancel_url" value="https%3A%2F%2Fualacademico.ual.es" type="HIDDEN">
+                    <input name="locale" value="" type="HIDDEN">
+                    <div class="form-group">
+                        <label for="ssousername">Usuario</label>
+                        <input type="text" class="form-control" TYPE="text" SIZE="30" MAXLENGTH="50" NAME="ssousername" value="" placeholder="Introduzca su usuario">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <INPUT class="form-control" TYPE="password" SIZE="30" MAXLENGTH="50" NAME="password" placeholder="Introduzca su contraseña">
+                        <a class="form-text" href="https://campus.ual.es/regeneraPass">
+                            ¿ Olvidó su contrase&ntilde;a ?
+                        </a>
+                    </div>
+
+                    <div class="d-flex flex-row justify-content-between buttons">
+                        <a class="btn no-padding" href="https://www.ual.es/servicios/stic/servicio/alta-usuarios">
+                            Solicitud de alta en Campus
+                        </a>
+                        <input type="submit" class="btn btn-primary" value="Conectar">
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer text-muted">
+                        El uso no autorizado de esta dirección está prohibido y puede estar sujeto a acciones civiles y penales. 
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 col-md-8">
+                        <div id="j_id331">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.ual.es/avisolegal">Aviso legal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.ual.es/politicaprivacidad">Privacidad</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://www.ual.es/servicios/stic/servicio/servicios-federados">Servicios Federados</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-4">
+                        <p class="copyright text-left text-md-right">&copy; UAL 2018</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
 </html>
